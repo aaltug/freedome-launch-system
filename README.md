@@ -4,8 +4,6 @@ Bu depo, **Gravity Junior AI Growth Systems Operator** pozisyonu teknik değerle
 
 Vaka çalışmasında sunulan teorik veriler, doğrudan test edilebilir, canlı sistemlere dönüştürülmüştür. Sadece fikir değil, **"Growth Operator"** mantığıyla kurgulanmış çalışır bir mimari sunulmaktadır.
 
-Canlı demo linki: https://aaltug.github.io/freedome-launch-system/
-
 ## 🚀 Proje İçeriği (Deliverables)
 
 | Dosya | Açıklama | Teknoloji / Yapı |
@@ -20,7 +18,7 @@ Canlı demo linki: https://aaltug.github.io/freedome-launch-system/
 ## 👨‍💻 Nasıl Test Edilir?
 
 ### 1. Landing Page'i Görüntüleme
-*   `index.html` dosyasını indirerek herhangi bir web tarayıcısında (Chrome, Safari vb.) açabilirsiniz. Veya [Canlı Demo Linki Eklenebilir] üzerinden doğrudan test edebilirsiniz.
+*   `index.html` dosyasını indirerek herhangi bir web tarayıcısında (Chrome, Safari vb.) açabilirsiniz. Veya [https://aaltug.github.io/freedome-launch-system/] üzerinden doğrudan test edebilirsiniz.
 *   *Tasarımda "Manuel Süreç vs FREEedome" animasyonu ve sürtünmesiz lead formu ön plana çıkarılmıştır.*
 
 ### 2. Otomasyon Akışı Diyagramı
@@ -38,5 +36,6 @@ Bu lansman paketi, aşağıdaki hedeflere ulaşacak şekilde optimize edildi:
 3. **Veriye Dayalı Karar:** KPI tablosundaki formüllerle duygulardan arındırılmış, matematiksel bütçe yönetimi.
 
 *Gravity ekibine saygılarımla sunarım.*
+
 
 
