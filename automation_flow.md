@@ -25,7 +25,7 @@ https://freedome.app/?utm_source=meta&utm_medium=paid_social&utm_campaign=freedo
 Form gönderildiği andan itibaren başlayan tetikleyici zincirinin vizualizasyonu.
 *(Grafiği görüntülemek için markdown önizleyicisini kullanabilirsiniz)*
 
-```mermaid
+
 graph TD
     %% Styling
     classDef trigger fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
@@ -82,3 +82,4 @@ Aşağıdaki tablo, form gönderiminden aktivasyona kadar olan tetikleyici zinci
 | **4** | E-posta açılmadı (D+1) | SMS veya LinkedIn DM tetikle | Twilio veya PhantomBuster |
 | **5** | Trial aktivasyon yapıldı | Satış ekibine bildirim + onboarding maili | Slack alert + HubSpot Task |
 | **6** | Referral linki paylaşıldı | Paylaşan kişiye ekstra kredi / ödül | Viral Loops veya ReferralHero |
+
