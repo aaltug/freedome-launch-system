@@ -25,9 +25,8 @@ https://freedome.app/?utm_source=meta&utm_medium=paid_social&utm_campaign=freedo
 Form gönderildiği andan itibaren başlayan tetikleyici zincirinin vizualizasyonu.
 *(Grafiği görüntülemek için markdown önizleyicisini kullanabilirsiniz)*
 
-
+```mermaid
 graph TD
-    %% Styling
     classDef trigger fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
     classDef process fill:#1e293b,stroke:#818cf8,stroke-width:1px,color:#fff;
     classDef decision fill:#312e81,stroke:#a5b4fc,stroke-width:2px,color:#fff;
@@ -35,39 +34,31 @@ graph TD
     classDef negative fill:#7f1d1d,stroke:#f87171,stroke-width:1px,color:#fff;
     classDef viral fill:#1e1b4b,stroke:#c084fc,stroke-width:3px,color:#fff;
 
-    %% Nodes
-    A([Form Gönderildi <br/> Webhook: Tally/Typeform]):::trigger
-    B{CRM Lead Puanı <br/> (HubSpot)}:::decision
+    A["Form Gönderildi (Tally/Typeform)"]:::trigger
+    B{"CRM Lead Puanı (HubSpot)"}:::decision
     
-    %% Bütçe / Skor Ayrımı
-    C[Kalite Skoru > 60]:::positive
-    D[Kalite Skoru ≤ 60]:::negative
+    C["Kalite Skoru > 60"]:::positive
+    D["Kalite Skoru <= 60"]:::negative
     
-    %% Kötü Lead Akışı
-    D --> E[HubSpot Nurture Sekansı <br/> 7 Gün / 3 E-posta]:::process
-    
-    %% İyi Lead Akışı
-    C --> F[Make/Zapier: Onay E-postası + <br/> Trial Aktivasyon Linki Gönder]:::process
-    
-    %% E-posta Etkileşim Kontrolü
-    F --> G{E-posta Açıldı mı? <br/> (D+1)}:::decision
-    
-    G -- Hayır --> H[Satış Temsilcisi: <br/> LinkedIn DM veya SMS Tetikle]:::process
-    G -- Evet --> I{Aktivasyon / Kayıt <br/> Yapıldı mı?}:::decision
-    
-    %% Viral Loop
-    I -- Evet --> J([Slack Alert: Yeni Aktif Lead <br/> + Onboarding Maili]):::trigger
-    I -- Hayır --> E
-    
-    J --> K[Viral Loops/ReferralHero: <br/> 'Arkadaşını Davet Et' Maili Gönder]:::viral
-    
-    %% Geri besleme
-    K -- Link Paylaşıldı --> L[Kullanıcıya Ekstra Kredi / <br/> 1 Aylık Ücretsiz Erişim Ver]:::positive
-    
-    %% Connections
     A --> B
     B --> C
     B --> D
+    
+    D --> E["HubSpot Nurture Sekansı (7 Gün / 3 E-posta)"]:::process
+    
+    C --> F["Onay E-postası + Trial Aktivasyon (Make/Zapier)"]:::process
+    
+    F --> G{"E-posta Açıldı mı? (D+1)"}:::decision
+    
+    G -- Hayır --> H["Satış Temsilcisi: LinkedIn DM veya SMS Tetikle"]:::process
+    G -- Evet --> I{"Aktivasyon / Kayıt Yapıldı mı?"}:::decision
+    
+    I -- Evet --> J["Slack Alert: Yeni Aktif Lead + Onboarding Maili"]:::trigger
+    I -- Hayır --> E
+    
+    J --> K["'Arkadaşını Davet Et' Maili Gönder (Viral Loops)"]:::viral
+    
+    K -- Link Paylaşıldı --> L["Kullanıcıya Ekstra Kredi / Ödül Ver"]:::positive
 ```
 
 ### Akış Detayları ve Kullanılacak Araçlar (Tech Stack)
