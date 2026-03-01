@@ -1,4 +1,4 @@
-# FREEedome 3 Günlük Mini Launch Sistemi
+# FREEdome 3 Günlük Mini Launch Sistemi
 
 Bu depo, **Gravity Junior AI Growth Systems Operator** pozisyonu teknik değerlendirme çalışması için hazırlanan tüm pratik çıktıları içermektedir.
 
@@ -36,3 +36,4 @@ Bu lansman paketi, aşağıdaki hedeflere ulaşacak şekilde optimize edildi:
 3. **Veriye Dayalı Karar:** KPI tablosundaki formüllerle duygulardan arındırılmış, matematiksel bütçe yönetimi.
 
 *Gravity ekibine saygılarımla sunarım.*
+
